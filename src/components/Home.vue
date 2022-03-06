@@ -3,7 +3,7 @@
     <div class="animate__animated animate__fadeInUp">
         <p>Welcome, this is the homepage.</p>
         <p>In order to play the quiz, all you need to do is press the 'PLAY' button above.</p>
-        <p>As of now, this quiz has been completed <span class="green">{{ number }}</span> times! The average score is: <span class="green">{{ avgScore }}</span>. There are <span class="green">{{ questionNum }}</span> questions, you can help by adding more - in order to do so, press the 'Add a question' button. After the quiz completition you can choose to submit your result, to see every result that's been submitted head to the 'Results' tab.</p>
+        <p>As of now, this quiz has been completed <span class="green">{{ number }}</span> times! The average score is: <span class="green">{{ avgScore }}</span>. There are <span class="green">{{ questionNum }}</span> questions, you can help by adding more - in order to do so, press the 'Add a question' button. After the quiz completion you can choose to submit your result, to see every result that's been submitted head to the 'Results' tab.</p>
         <p>That's it, have fun!</p>
     </div>
 </template>
