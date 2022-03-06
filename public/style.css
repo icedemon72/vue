@@ -1,0 +1,123 @@
+body {
+    font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+    background-color: #131516;
+    color: #e8e6e3 !important;
+}
+
+input {
+    text-align: center;
+    display: none;
+}
+
+#quiz {
+    position: absolute;
+    width: 500px;
+    height: 400px;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    margin: -200px 0 0 -250px;
+    text-align: center;
+    box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
+}
+
+.header {
+    letter-spacing: 5px;
+}
+
+.router-link-active {
+    background-color: rgb(92, 92, 92);
+}
+
+.wrong {
+    border: 1px solid #ba1425;
+    background-color: #e5c2c5;
+    color: #131516;
+}
+
+.corr {
+    border: 1px solid rgb(81, 224, 68);
+    background-color: rgb(196, 243, 192);
+    color: #131516;
+}
+
+.hover_ans {
+    transition: ease-in 0.2s;
+    -webkit-transition: ease-in 0.2s;
+}
+
+.hover_ans:hover {
+    cursor: pointer;
+    background-color: rgb(214, 214, 214);
+    color: #131516;
+}
+
+.question_text {
+    font-weight: bold;
+    text-align: justify;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.question_label {
+    display: block;
+    margin-top: 16px;
+    border-radius: 3px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.btn {
+    margin-top: 20px;
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: #131516;
+    color: #e8e6e3;
+    border: 0;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    border-radius: 3px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: rgb(214, 214, 214);
+    color: #131516;
+}
+
+.corr_answer {
+    color: rgb(81, 224, 68)
+}
+
+.wrong_answer {
+    color: #ba1425;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 99%;
+    color: #e8e6e3;
+    text-align: end;
+}
+
+@media screen and (max-height: 650px) {
+    #quiz {
+        position: static;
+        width: 100%;
+        height: auto;
+        margin: auto;
+        box-shadow: none;
+    }
+}
+
+@media screen and (max-height: 600px) {
+    .footer {
+        display: none;
+    }
+}
+
