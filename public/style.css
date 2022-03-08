@@ -18,6 +18,8 @@ input {
     left: 50%;
     margin: -200px 0 0 -250px;
     text-align: center;
+    background-color: #0c0c0c;
+    border-radius: 1%;
     box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
 }
 
@@ -74,7 +76,8 @@ input {
     width: 100%;
     padding-top: 8px;
     padding-bottom: 8px;
-    background-color: #131516;
+    /* background-color: #131516; */
+    background-color: #0c0c0c;
     color: #e8e6e3;
     border: 0;
     transition: all 0.4s;
@@ -107,11 +110,15 @@ input {
 
 @media screen and (max-height: 650px) {
     #quiz {
+        background-color: #131516;
         position: static;
         width: 100%;
         height: auto;
         margin: auto;
         box-shadow: none;
+    }
+    .btn {
+        background-color: #131516;
     }
 }
 

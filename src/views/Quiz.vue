@@ -5,13 +5,15 @@
             <p class="question_text">
                 Q: {{ questions[index]['question'] }}
             </p>
-            <label :for="key" :key="key" class="question_label" v-for="answer, key in questions[index]['answers']" :class="[{'hover_ans' : selectedAnswer == ''},
-                        {'wrong' : selectedAnswer == key},
-                        {'corr' : key == questions[index]['correctAnswer'] && selectedAnswer != ''}]">
-                        <input type="radio" :id="key" class="hidden" :value="key" @change="answered($event)"
-                            v-model="selectedAnswer" :disabled="selectedAnswer != ''" />
-                        {{ answer }} <br />
-                    </label>
+            <div id="questionList">
+                <label :for="key" :key="key" class="question_label" v-for="answer, key in questions[index]['answers']" :class="[{'hover_ans' : selectedAnswer == ''},
+                            {'wrong' : selectedAnswer == key},
+                            {'corr' : key == questions[index]['correctAnswer'] && selectedAnswer != ''}]">
+                            <input type="radio" :id="key" class="hidden" :value="key" @change="answered($event)"
+                                v-model="selectedAnswer" :disabled="selectedAnswer != ''" />
+                            {{ answer }} <br />
+                </label>
+            </div>
             <div>
                 <button class="btn" v-show="selectedAnswer != '' && indexCount < count-1" @click="nextQuestion">
                     &gt;
@@ -24,7 +26,7 @@
         </div>
         <div v-else>
             <h2 class="res_header">Results</h2>
-            <div>
+            <div id="res">
                 <p>
                     Correct Answers:
                     <span class="corr_answer">{{ correctAnswer }}</span>
@@ -34,15 +36,17 @@
                     <span class="wrong_answer">{{ wrongAnswer }}</span>
                 </p>
             </div>
-            <div>
-                <button id="sbmBtn" class="btn" @click="submit">
-                    Submit results?
-                </button>
-            </div>
-            <div>
-                <button class="btn" @click="resetQuiz">
-                    Play again?
-                </button>
+            <div id="res">
+                <div>
+                    <button id="sbmBtn" class="btn" @click="submit">
+                        Submit results?
+                    </button>
+                </div>
+                <div>
+                    <button class="btn" @click="resetQuiz">
+                        Play again?
+                    </button>
+                </div>
             </div>
         </div>
     </div>
@@ -155,7 +159,55 @@
 </script>
 
 <style scoped>
+    #questionList {
+        margin-top: 20px;
+    }
+
+    #res {
+        margin-top: 50px;
+    }
+
     #show {
         display: none;
     }
+
+    @media screen and (max-width: 508px) {
+        #quiz {
+            position: static;
+            width: 100%;
+            height: 50%;
+            margin: auto;
+            margin-top: 100px;
+            box-shadow: none;
+            background-color: #131516;
+        }
+        
+        .btn {
+            background-color: #131516;
+        }       
+
+        .btn:hover {
+            cursor: pointer;
+            background-color: rgb(214, 214, 214);
+            color: #131516;
+        } 
+    }
+    @media screen and (max-height: 650px) {
+        .question_text {
+            text-align: center;
+        }
+
+        #quiz {
+            height: 50%;
+            margin-top: 10%;
+        } 
+    }
+
+    @media screen and (max-height: 440px) {
+        #quiz {
+            height: auto;
+            margin-top: 50px;
+        }
+    }
+
 </style>

@@ -1,5 +1,6 @@
 <template>
     <div id="quiz" class="animate__animated animate__fadeInUp">
+        <h2>Add a Question</h2>
         <h3>Question:</h3>
         <input placeholder="Your question goes here..." id="question" type="text" />
 
@@ -81,6 +82,11 @@
 </script>
 
 <style scoped>
+    h1 {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
     h3, p, input {
         text-align: start;
         margin-left: 20px;
@@ -114,27 +120,50 @@
         height: 500px;
         margin: -250px 0 0 -350px;
     }
+
     @media screen and (max-height: 800px) {
         #quiz {
             position: static;
-            width: 100%;
-            height: auto;
             margin: auto;
             box-shadow: none;
+            background-color: #131516;
         }
+
+        .btn {
+            background-color: #131516;
+        }
+
+        .btn:hover {
+            cursor: pointer;
+            background-color: rgb(214, 214, 214);
+            color: #131516;
+        } 
+
     }
 
-    @media screen and (max-width: 870px) {
+    @media screen and (max-width: 800px) {
         #quiz {
-            margin-top: 10px;
             position: static;
             width: 100%;
             height: auto;
             margin: auto;
+            margin-top: 10px;
             box-shadow: none;
+            background-color: #131516;
         }
         
+        .btn {
+            background-color: #131516;
+        }
+
+        .btn:hover {
+            cursor: pointer;
+            background-color: rgb(214, 214, 214);
+            color: #131516;
+        } 
+
         input {
+            width: 90%;
             margin-left: auto;
             margin-right: auto;
         }
