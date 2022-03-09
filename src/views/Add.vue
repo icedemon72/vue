@@ -93,6 +93,7 @@
     }
 
     input {
+        height: 20px;
         text-align: start;
         display: block;
         width: 640px;
@@ -117,8 +118,8 @@
 
     #quiz {
         width: 700px;
-        height: 500px;
-        margin: -250px 0 0 -350px;
+        height: 530px;
+        margin: -265px 0 0 -350px;
     }
 
     @media screen and (max-height: 800px) {

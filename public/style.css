@@ -108,6 +108,12 @@ input {
     text-align: end;
 }
 
+@media screen and (max-width: 450px) {
+    .footer, .wave {
+        display: none;
+    }
+}
+
 @media screen and (max-height: 650px) {
     #quiz {
         background-color: #131516;
@@ -123,7 +129,7 @@ input {
 }
 
 @media screen and (max-height: 600px) {
-    .footer {
+    .footer, .wave {
         display: none;
     }
 }
