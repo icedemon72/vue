@@ -202,8 +202,9 @@
         width: 50px;
         height: 50px;
         line-height: 50px;
-        margin-top: 25px;
-        margin-left: 20px;
+        position: fixed;
+        top: 20px;
+        left: 20px;
         border: 1px solid #0c0c0c;
         border-radius: 100%;
         transition: all 0.4s;
@@ -330,7 +331,7 @@
 
         #quiz {
             height: 50%;
-            margin-top: 10%;
+            margin-top: 100px;
         } 
 
         .question_dots {
@@ -346,7 +347,7 @@
         }
 
         .prompt > div > h3 {
-            margin-top: 25%;
+            margin-top: 150px;
         }
 
         .prompt_text {
